@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MauiControls.Pages.MauiPresentationControls"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	Title="MauiPresentationControls">
+	<ScrollView>
+		<VerticalStackLayout Padding="10" Spacing="15">
+			<BoxView
+				BackgroundColor="White"
+				CornerRadius="20"
+				HeightRequest="200"
+				HorizontalOptions="Start"
+				VerticalOptions="Center"
+				WidthRequest="200"
+				Color="CornflowerBlue" />
+			<Label
+				BackgroundColor="Yellow"
+				CharacterSpacing="1"
+				FontAttributes="Bold"
+				FontSize="Large"
+				HorizontalOptions="Center"
+				HorizontalTextAlignment="Center"
+				Text="Bem-Vindo &#10; ao .NET MAUI!"
+				TextColor="Black"
+				VerticalOptions="Center" />
+
+			<Label
+				FontSize="Medium"
+				LineHeight=".8"
+				MaxLines="4"
+				Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." />
+
+			<Label
+				BackgroundColor="Yellow"
+				FontSize="Large"
+				Text="Este é um texto &lt;strong style=&quot;color:red&quot;&gt;HTML"
+				TextColor="Black"
+				TextType="Html" />
+
+			<Label
+				FontSize="Large"
+				Text="Texto sublinhado"
+				TextDecorations="Underline" />
+
+			<Label
+				FontSize="Large"
+				Text="Texto tachado"
+				TextDecorations="Strikethrough" />
+
+			<Label
+				FontSize="Large"
+				Text="Texto sublinhado e taxado"
+				TextDecorations="Underline,Strikethrough" />
+
+			<Label
+				FontSize="Large"
+				Text="Texto transformado em maiúculas"
+				TextTransform="Uppercase" />
+
+			<Label
+				FontSize="Large"
+				Text="Texto Transformado em minúsculas"
+				TextTransform="Lowercase" />
+
+			<Ellipse
+				Fill="Yellow"
+				HeightRequest="150"
+				HorizontalOptions="Center"
+				Stroke="Blue"
+				StrokeThickness="10"
+				WidthRequest="150" />
+
+			<Line
+				Stroke="black"
+				StrokeThickness="5"
+				X1="0"
+				X2="300"
+				Y1="0"
+				Y2="50" />
+
+			<Rectangle
+				Fill="DarkRed"
+				HeightRequest="50"
+				HorizontalOptions="End"
+				RadiusX="10"
+				RadiusY="10"
+				Stroke="Black"
+				StrokeThickness="5"
+				WidthRequest="150" />
+
+			<Polygon
+				Fill="LightBlue"
+				Points="40, 10 70, 80 10, 50"
+				Stroke="Blue"
+				StrokeThickness="5" />
+
+			<Polyline Points="0,0 10,30,     15,0 18,60     23,30 35, 30 40, 0     43, 60 48, 30 100, 30" Stroke="Red" />
+
+			<Path
+				Aspect="Uniform"
+				Data="M 10,100 L 100,100 100,50Z"
+				HorizontalOptions="Center"
+				Stroke="Black" />
+
+			<Border
+				Padding="16,8"
+				Background="Blue"
+				HorizontalOptions="Center"
+				Stroke="Gold"
+				StrokeShape="RoundRectangle 40,0,0,40"
+				StrokeThickness="4">
+				<Label
+					FontAttributes="Bold"
+					FontSize="18"
+					Text="Bem-vindo ao .NET MAUI"
+					TextColor="White" />
+			</Border>
+
+			<Image Aspect="AspectFit" Source="dotnet_bot.png" />
+
+			<Image
+				Aspect="AspectFit"
+				HeightRequest="400"
+				Source="https://macoratti.net/macoratti.gif"
+				WidthRequest="400" />
+
+			<Image
+				Aspect="AspectFill"
+				HeightRequest="100"
+				IsAnimationPlaying="True"
+				Source="https://macoratti.net/1_pulando.gif"
+				WidthRequest="100" />
+			<!--  this enables the animation  -->
+
+			<Frame CornerRadius="200">
+				<Image Source="dotnet_bot.png" />
+			</Frame>
+
+			<Frame
+				Padding="8"
+				BorderColor="Gray"
+				CornerRadius="5">
+				<StackLayout>
+					<Label
+						FontAttributes="Bold"
+						FontSize="30"
+						Text="Exemplo Card" />
+					<BoxView
+						HeightRequest="2"
+						HorizontalOptions="Fill"
+						Color="gray" />
+					<Label FontSize="20" Text="Usando frame e stacklayout" />
+
+				</StackLayout>
+			</Frame>
+
+			<WebView HeightRequest="500" Source="https://macoratti.net/" />
+
+
+		</VerticalStackLayout>
+	</ScrollView>
+</ContentPage>
