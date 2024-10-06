@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MauiControls.MauiCommandControls"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	Title="Maui Command Controls">
+
+	<ScrollView>
+		<VerticalStackLayout Margin="10">
+
+			<Button
+				x:Name="btnDemo1"
+				BackgroundColor="Green"
+				Clicked="btnDemo_Clicked"
+				HorizontalOptions="Center"
+				Text="Clique para Rodar o Texto!"
+				VerticalOptions="Center" />
+
+			<Label
+				x:Name="lblDemo"
+				FontAttributes="Bold"
+				FontSize="25"
+				HorizontalOptions="Center"
+				Text=".NET MAUI"
+				TextColor="Blue"
+				VerticalOptions="Center" />
+
+			<Button
+				x:Name="btnDemo"
+				BackgroundColor="Green"
+				Clicked="btnDemo_Clicked"
+				HorizontalOptions="Center"
+				ImageSource="android.png"
+				Text="Clique para Rodar o Texto!"
+				TextColor="Black" />
+
+			<ImageButton
+				x:Name="btnImgDemo"
+				Aspect="AspectFit"
+				BorderColor="Black"
+				Clicked="btnImgDemo_Clicked"
+				HeightRequest="200"
+				HorizontalOptions="Center"
+				Source="dotnet_bot.png"
+				VerticalOptions="Center"
+				WidthRequest="200" />
+
+			<StackLayout Padding="20">
+				<Label
+					FontSize="Large"
+					Text="Qual o seu animal favorito?"
+					TextColor="Blue" />
+				<RadioButton
+					CheckedChanged="RadioButton_CheckedChanged"
+					Content="Gato"
+					GroupName="Pets2"
+					Value="Gato" />
+				<RadioButton
+					CheckedChanged="RadioButton_CheckedChanged"
+					Content="Cão"
+					GroupName="Pets2"
+					Value="Cão" />
+				<RadioButton
+					CheckedChanged="RadioButton_CheckedChanged"
+					Content="Coelho"
+					GroupName="Pets2"
+					Value="Coelho" />
+				<Label x:Name="lblPets2" Text="" />
+			</StackLayout>
+
+			<StackLayout>
+				<SearchBar
+					BackgroundColor="cyan"
+					Placeholder="Procurar produto"
+					SearchButtonPressed="SearchBar_SearchButtonPressed" />
+			</StackLayout>
+
+			<SwipeView Background="LightCyan">
+				<SwipeView.LeftItems>
+					<SwipeItems>
+						<SwipeItem
+							BackgroundColor="LightGreen"
+							IconImageSource="cat.png"
+							Invoked="SwipeItem_Invoked"
+							Text="Gato" />
+						<SwipeItem
+							BackgroundColor="LightPink"
+							IconImageSource="dog.png"
+							Invoked="SwipeItem_Invoked"
+							Text="Cão" />
+					</SwipeItems>
+				</SwipeView.LeftItems>
+				<SwipeView.RightItems>
+					<SwipeItem
+						BackgroundColor="LemonChiffon"
+						IconImageSource="bunny.png"
+						Invoked="SwipeItem_Invoked"
+						Text="Coelho" />
+				</SwipeView.RightItems>
+				<Grid
+					BackgroundColor="LightGrey"
+					HeightRequest="50"
+					WidthRequest="300">
+					<Label
+						FontSize="Large"
+						HorizontalOptions="Center"
+						Text="&lt;== Deslizar ==&gt;"
+						VerticalOptions="Center" />
+				</Grid>
+			</SwipeView>
+
+		</VerticalStackLayout>
+	</ScrollView>
+</ContentPage>
