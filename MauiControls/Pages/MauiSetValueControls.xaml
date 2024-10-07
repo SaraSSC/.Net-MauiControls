@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MauiControls.Pages.MauiSetValueControls"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	Title="MauiSetValueControls">
+	<VerticalStackLayout>
+		<Label Text="Clique no Checkbox" />
+		<CheckBox
+			x:Name="Checkbox1"
+			CheckedChanged="Checkbox1_CheckedChanged"
+			HorizontalOptions="Start"
+			IsChecked="True"
+			Color="Green" />
+
+		<Label Text="Clique no Checkbox" />
+		<StackLayout Orientation="Horizontal">
+			<CheckBox
+				x:Name="Checkbox2"
+				CheckedChanged="Checkbox2_CheckedChanged"
+				HorizontalOptions="Start"
+				IsChecked="False"
+				Color="Green" />
+			<CheckBox
+				x:Name="Checkbox3"
+				CheckedChanged="Checkbox3_CheckedChanged"
+				HorizontalOptions="Start"
+				IsChecked="False"
+				Color="Blue" />
+		</StackLayout>
+
+		<StackLayout Padding="40">
+			<Label x:Name="lblSlider" HorizontalOptions="Center" />
+			<Slider
+				x:Name="slider1"
+				Maximum="10"
+				MaximumTrackColor="Green"
+				Minimum="0"
+				MinimumTrackColor="Yellow"
+				ThumbColor="DarkRed"
+				ThumbImageSource="cat.png"
+				ValueChanged="slider1_ValueChanged" />
+		</StackLayout>
+
+		<StackLayout Margin="10">
+			<Stepper
+				x:Name="stepper1"
+				HorizontalOptions="Start"
+				Increment="2"
+				Maximum="10"
+				Minimum="2"
+				ValueChanged="stepper1_ValueChanged" />
+			<Label x:Name="lblStepper" HorizontalOptions="Start" />
+		</StackLayout>
+
+		<StackLayout>
+			<Label HorizontalOptions="Center" Text="Switch" />
+			<Switch
+				x:Name="switch1"
+				HorizontalOptions="Center"
+				IsToggled="False"
+				OnColor="Black"
+				ThumbColor="Blue"
+				Toggled="switch1_Toggled" />
+		</StackLayout>
+
+		<DatePicker
+			Date="06/21/2024"
+			DateSelected="DatePicker_DateSelected"
+			Format="dd/MM/yyyy"
+			HorizontalOptions="Center"
+			MaximumDate="12/31/2024"
+			MinimumDate="01/01/2024" />
+
+		<TimePicker
+			x:Name="timer1"
+			Format="HH:mm:ss"
+			HorizontalOptions="Center"
+			PropertyChanged="timer1_PropertyChanged"
+			Time="10:45:25" />
+	</VerticalStackLayout>
+</ContentPage>
