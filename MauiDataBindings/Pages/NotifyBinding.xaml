@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MauiDataBindings.Pages.NotifyBinding"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	Title="NotifyBinding">
+	
+	<VerticalStackLayout Spacing="20">
+		<Entry FontSize="40" Text="{Binding Nome}" />
+		<Entry FontSize="40" Text="{Binding Preco, StringFormat='R$ {0:F2}'}" />
+		<Entry FontSize="40" Text="{Binding Path=Stock, StringFormat='Quantidade: {0}'}" />
+
+		<Button x:Name="btnAtualiza" Text="Atualizar Produto" FontSize="20" Clicked="btnAtualiza_Clicked" />
+	</VerticalStackLayout>
+</ContentPage>

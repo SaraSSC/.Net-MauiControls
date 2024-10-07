@@ -1,4 +1,6 @@
-﻿namespace MauiDataBindings
+﻿using MauiDataBindings.Pages;
+
+namespace MauiDataBindings
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new NotifyBinding());
         }
     }
 }
