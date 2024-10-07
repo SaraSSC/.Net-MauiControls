@@ -114,7 +114,10 @@
 						<SwitchCell Text="Ar condicionado digital" />
 						<SwitchCell Text="Alarme" />
 						<SwitchCell Text="Direção eletro-hidráulica" />
-						<SwitchCell x:Name="AlertaCinto" OnChanged="AlertaCinto_OnChanged" Text="Alerta cinto de segurança" />
+						<SwitchCell
+							x:Name="AlertaCinto"
+							OnChanged="AlertaCinto_OnChanged"
+							Text="Alerta cinto de segurança" />
 						<TextCell Text="Valor Total: 65.900,00" TextColor="Black" />
 						<EntryCell Placeholder="Informe o seu nome" />
 					</TableSection>

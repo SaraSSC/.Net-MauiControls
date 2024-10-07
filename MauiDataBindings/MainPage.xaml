@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MauiDataBindings.MainPage"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:models="clr-namespace:MauiDataBindings.Models">
+
+	<!--<ContentPage.Resources>
+		<models:Produto
+			x:Key="produto"
+			Nome="Iphone 5"
+			Preco="1000.00"
+			Stock="333" />
+	
+	Label-  Text="{Binding Nome, Source={StaticResource produto}}"
+	</ContentPage.Resources>-->
+
+	<ContentPage.BindingContext>
+		<models:Produto
+		x:Name="produto"
+		Nome="Iphone 5"
+		Preco="1000.00"
+		Stock="333" />
+	</ContentPage.BindingContext>
+
+	<ScrollView>
+		<VerticalStackLayout>
+
+
+			<Label
+				x:Name="lblNome"
+				FontSize="18"
+				HorizontalOptions="Center"
+				Text="{Binding Source={x:Reference produto},Path=Nome}"
+				VerticalOptions="Center" />
+
+			<Label
+				x:Name="lblPreco"
+				FontSize="18"
+				HorizontalOptions="Center"
+				Text="{Binding Source={x:Reference produto},Path=Preco, StringFormat='R$ {0:F2}'}"
+				VerticalOptions="Center" />
+
+			<Label
+				x:Name="lblStock"
+				FontSize="18"
+				HorizontalOptions="Center"
+				Text="{Binding Source={x:Reference produto},Path=Stock, StringFormat='Quantidade: {0}'}"
+				VerticalOptions="Center" />
+
+			<!--<Button
+				x:Name="CounterBtn"
+				Clicked="OnCounterClicked"
+				HorizontalOptions="Fill"
+				Text="Click para realizar o databinding" />-->
+		</VerticalStackLayout>
+	</ScrollView>
+
+</ContentPage>
