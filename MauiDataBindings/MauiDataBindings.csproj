@@ -57,6 +57,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\AfacadFlux-Black.ttf" />
+	  <None Remove="Resources\Fonts\AfacadFlux-Bold.ttf" />
+	  <None Remove="Resources\Fonts\AfacadFlux-ExtraBold.ttf" />
+	  <None Remove="Resources\Fonts\AfacadFlux-ExtraLight.ttf" />
+	  <None Remove="Resources\Fonts\AfacadFlux-Light.ttf" />
+	  <None Remove="Resources\Fonts\AfacadFlux-Medium.ttf" />
+	  <None Remove="Resources\Fonts\AfacadFlux-Regular.ttf" />
+	  <None Remove="Resources\Fonts\AfacadFlux-SemiBold.ttf" />
+	  <None Remove="Resources\Fonts\AfacadFlux-Thin.ttf" />
+	  <None Remove="Resources\Fonts\fontello.ttf" />
+	  <None Remove="Resources\Images\girl.png" />
+	  <None Remove="Resources\Images\icegif_1393.gif" />
+	  <None Remove="Resources\Raw\demo.json" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
@@ -64,6 +80,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Pages\BindingModes.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\MauiImages.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\NotifyBinding.xaml">

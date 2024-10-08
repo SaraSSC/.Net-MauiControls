@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MauiDataBindings.Pages.MauiImages"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	Title="MauiImages">
+	<!--<VerticalStackLayout>
+		<Image Aspect="Fill" Source="dotnet_bot.png" />
+		<Image IsAnimationPlaying="True" Source="icegif_1393.gif" />
+	
+		<Label Text="Usando fonts" FontSize="30" FontFamily="OpenSansRegular"></Label>
+		<Label Text="Usando fonts" FontSize="30" FontFamily="AfacadBold"></Label>
+	</VerticalStackLayout>-->
+
+	<!--<VerticalStackLayout
+		
+		HorizontalOptions="Center"
+		Spacing="20"
+		VerticalOptions="Center">
+
+		<Image>
+			<Image.Source>
+				<FontImageSource
+					FontFamily="IconsFont"
+					Glyph="&#xE800;"
+					Size="40"
+				 />
+			</Image.Source>
+		</Image>
+
+		<Image>
+			<Image.Source>
+				<FontImageSource
+					FontFamily="{OnPlatform Android=IconsFont}"
+					Glyph="&#xF0E0;"
+					Size="40" />
+			</Image.Source>
+		</Image>
+
+		<Image Source="{FontImage &#xE801;, FontFamily=IconsFont, Size=44}" />
+
+	</VerticalStackLayout>-->
+
+	<StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+		<Image Source="{Binding Foto}" />
+		<VerticalStackLayout HorizontalOptions="Center">
+			<Label FontSize="30" Text="{Binding Nome}" />
+			<Label FontSize="30" Text="{Binding Idade}" />
+		</VerticalStackLayout>
+	</StackLayout>
+</ContentPage>
